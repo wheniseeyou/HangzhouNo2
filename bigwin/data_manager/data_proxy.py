@@ -6,6 +6,7 @@
 2， 按分钟
 3， 按财务周期
 """
+import pandas as pd
 import yaml
 import logging
 import os
@@ -19,8 +20,10 @@ class DataProxy(object):
         all_frequency_type_list = self._get_frequency_list(self.CONFIG_YAML_PATH)
         if frequency_type not in all_frequency_type_list:
             logging.error("你输入的参数有误，请检查你输入的频率参数")
-        
+        self.frequency = frequency_type
 
+    def data_show_df(self) -> pd.DataFrame:
+        return pd.DataFrame()
         
     
     def _get_config_parse(self, file_path: str):
