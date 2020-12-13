@@ -23,10 +23,17 @@ class TranscationManager(object):
     def __init__(self, order_id: str, now_date: str, order_follow_id: str, portfolio: dict):
         """
         order_id: 衍生品编号
+            "600132"
         now_date: 就是我们的当日回测日期
+            "2020-01-01"
         order_follow_id： 订单编号
+            "diuwf314bib" SHA256
         portfolio: 持仓衍生品信息  主要由 持仓衍生品代码 和其订单号 和 其买入日期 以及 持有几手组成
+            {"STOCK": {"600132": {"swhudiq123": {"2020-01-01": 20}, "dwqwqd": {"2020-01-09": 30}}}}
+
         """
+        
+
 
 
 
